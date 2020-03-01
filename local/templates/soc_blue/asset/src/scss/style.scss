@@ -1,0 +1,154 @@
+@import "bootstrap";
+
+@font-face {
+	font-family: 'GolosText';
+	src: url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Black.eot');
+	src:
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Black.eot?#iefix') format('embedded-opentype'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Black.woff2') format('woff2'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Black.woff') format('woff'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosText';
+	src: url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_DemiBold.eot');
+	src:
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_DemiBold.eot?#iefix') format('embedded-opentype'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_DemiBold.woff2') format('woff2'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_DemiBold.woff') format('woff'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_DemiBold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosText';
+	src: url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Medium.eot');
+	src:
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Medium.eot?#iefix') format('embedded-opentype'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Medium.woff2') format('woff2'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Medium.woff') format('woff'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosText';
+	src: url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Regular.eot');
+	src:
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Regular.eot?#iefix') format('embedded-opentype'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Regular.woff2') format('woff2'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Regular.woff') format('woff'),
+	     url('/local/templates/soc_blue/asset/dist/fonts/Golos%20Text_Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+$font-stack: -apple-system, BlinkMacSystemFont, "GolosText", "Open Sans", "Helvetica Neue", sans-serif;
+
+
+*{
+  box-sizing: border-box;
+}
+body {
+  font-style: normal;
+  font-weight: 400;
+  font-family: $font-stack;
+  line-height: $base-line-height;
+  color: $color-dark;
+  background-color: $color-body;
+}
+.container{
+  max-width: $container-max-width;
+  min-width: $container-min-width;
+  margin: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  @include breakpoint(max-width $pad-width){
+    padding-left: $container-padding-pad;
+    padding-right: $container-padding-pad;
+  }
+}
+
+main {
+  display: flex;
+  min-height: calc(100vh - #{$footer-height});
+  padding-bottom: 40px;
+  @include breakpoint(max-width $desktop-width){
+    padding-top: 60px;
+  }
+}
+.shadow{
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.2);
+}
+#page-wrap{
+  background-color: $color-white;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  margin-bottom: 3em;
+}
+.content{
+  width: 100%;
+  &.with-sidebar{
+    width: calc(100% - #{$sidebar-left});
+    @include breakpoint(max-width $desktop-width){
+      width: 100%;
+    }
+  }
+}
+.section-name{
+  text-align: left;
+  margin-top:0;
+  font-size: 1.6em;
+  @include breakpoint(max-width $pad-width){
+    font-size: 1.2em;
+  }
+}
+.section-header{
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  line-height: 1.5em;
+  @include breakpoint(max-width $pad-width){
+    font-size: 1.2em;
+  }
+}
+.section-block{
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  @include breakpoint(max-width $pad-width){
+    margin-top: 2.5rem;
+  }
+}
+a{
+  color: $color-accent;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.table{
+  display: table;
+  width: 100%;
+  &.table-blue{
+    .table-row{
+      &:nth-child(even){
+        background-color: #e9f1ff;
+      }
+    }
+    .table-cell{
+      padding: 12px;
+    }
+  }
+}
+.table-row{
+  display: table-row;
+}
+.table-cell{
+  display: table-cell;
+}

@@ -1,0 +1,112 @@
+.footer{
+  min-height: $footer-height;
+  background-color: $color-primary;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $color-white;
+  @include breakpoint(max-width $pad-width){
+    min-height: auto;
+  }
+  a{
+    color: $color-white;
+    &:hover{
+      color: $color-accent;
+    }
+  }
+  .menu-block{
+    margin-bottom: 24px;
+    @include breakpoint(max-width $pad-width){
+      display: none;
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li{
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 8px;
+        margin-right: 8px;
+        a{
+          text-decoration: none;
+          &:hover, &.selected{
+            color: $color-accent;
+          }
+        }
+      }
+    }
+  }
+  .info-block{
+    border-bottom: 1px solid #868686;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    @include breakpoint(max-width $pad-width){
+      display: none;
+    }
+    .small-text{
+      display: inline-block;
+      font-size: 12px;
+      line-height: 1.5em;
+    }
+    .info-table{
+      margin-top: 12px;
+      .table-cell{
+        vertical-align: middle;
+      }
+    }
+    .flex-wrapper{
+      display: flex;
+      margin-left: -12px;
+      margin-right: -12px;
+      .info-cell{
+        margin: 12px;
+        &:first-child{
+          width: calc(40% - 24px);
+          text-align: left;
+        }
+        &:nth-child(2){
+          width: calc(40% - 24px);
+          text-align: center;
+        }
+        &:last-child{
+          width: calc(20% - 24px);
+          text-align: right;
+        }
+        .info-text{
+          text-align: left;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .bottom-block{
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(max-width $pad-width){
+      display: block;
+    }
+    .coop{
+      width: 50%;
+      line-height: 1.3;
+      font-size: 12px;
+      @include breakpoint(max-width $pad-width){
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .dev{
+      font-size: 13px;
+      width: 50%;
+      text-align: right;
+      @include breakpoint(max-width $pad-width){
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+      }
+      a{
+        font-weight: 300;
+      }
+    }
+  }
+}

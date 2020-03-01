@@ -1,0 +1,25 @@
+.work-info{
+    border: 1px solid $color-border;
+    .work-header{
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 10px;
+    }
+    .work-text{
+        background-color: $color-primary-light;
+        padding:12px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                margin-bottom: 8px;
+              &:first-child{
+                  padding-left: 0px;
+                  margin-bottom: 10px;
+                  font-weight: 700;
+              }  
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import 'sprite-generated';
+@include retina-sprites($retina-groups);
+
+.svg-icon{
+  width: 32px;
+  height: 32px;
+}
+.ic-inline{
+  display: inline-block;
+}
+.ic-middle{
+  width: 24px;
+  height: 24px;
+}
+.icon-grey{
+  fill: #b4b4b4;
+}
+.icon-white{
+  fill: #fff;
+}
+.ic-block{
+  display: block;
+}

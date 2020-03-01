@@ -1,0 +1,99 @@
+.header{
+  //height: $header-height;
+  color: $color-white;
+  margin-bottom: 20px;
+  @include breakpoint(max-width $desktop-width){
+    background-color: $color-primary;
+    height: $mobile-header-height;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  }
+  .top-block{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: $color-primary;
+
+    @include breakpoint(max-width $desktop-width){
+      display: none;
+    }
+    .top-block-wrapper{
+      display: flex;
+    }
+    .logo-block{
+      margin-right: 18px;
+      .logo-descr{
+        line-height: 1.2;
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+    }
+    .center-block{
+      width: 50%;
+      padding-left: 14px;
+      padding-right: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .company-name {
+        font-size: 18px;
+        line-height: 1.3em;
+        font-weight: 400;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .right-block{
+      width: calc(50% - 156px);
+      display: flex;
+      justify-content: flex-end;
+      .info-block{
+        min-width: 235px;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+        .info-item{
+          margin-bottom: 8px;
+        }
+        .icon-cell{
+          vertical-align: middle;
+          padding-right: 4px;
+        }
+        .value-cell{
+          vertical-align: top;
+        }
+        .phones-cell{
+          margin-bottom: 10px;
+        }
+        .number-name{
+          display: inline-block;
+          width: 35px;
+          font-size: 14px;
+        }
+        .phone-number{
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+        .address-value{
+          line-height: 1.3;
+          padding-bottom: 12px;
+        }
+      }
+      .additional-block{
+        width: 45%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 18px;
+      }
+    }
+  }
+}

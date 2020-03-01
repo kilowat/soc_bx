@@ -1,0 +1,84 @@
+<%
+  var data = {
+    title: "Главная",
+    show_sidebar: true,
+    sidebar_html : _.template(require('./../includes/sidebar.html').default)(),
+    show_map: true,
+  };
+  var news ={
+    "name": "Название",
+    "text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque dolores facere, labore nihil odit temporibus vel voluptates. Atque doloribus error, facilis fugit incidunt laboriosam maxime quam sit vero voluptas?"
+  };
+  var sliders = [
+    {
+      name: "Армавирский реабилитационный центр оборудован новой котельной",
+      text: "В торжественной церемонии открытия приняли участие заместитель губернатора Кубани Анатолий Вороновский, первый заместитель министра труда и социального развития Краснодарского края Евгений Наумов...",
+      url: "#",
+      img: "/img/slide-1.jpg"
+    },
+        {
+      name: "Армавирский реабилитационный центр оборудован новой котельной",
+      text: "В торжественной церемонии открытия приняли участие заместитель губернатора Кубани Анатолий Вороновский, первый заместитель министра труда и социального развития Краснодарского края Евгений Наумов...",
+      url: "#",
+      img: "/img/slide-1.jpg"
+    }
+  ];
+%>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+  <div class="main-slider">
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides">
+          <% for(var i = 0; i < sliders.length; i++){%>
+            <div class="glide__slide" style="background-image:url(<%=sliders[i].img%>)">
+              <div class="pic-wrapper"></div>
+              <div class="slider-content">
+                <div class="slide-header"><%=sliders[i].name%></div>
+                <div class="slide-text"><%=sliders[i].text%></div>
+              </div>
+              <div class="link-to-detail">
+                <a href="" title="">Подробней</a>
+              </div>
+            </div>
+          <%}%>
+        </div>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <% for(var i = 0; i < sliders.length; i++){%>
+         <button class="glide__bullet" data-glide-dir="=<%=i%>"></button>
+        <%}%>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      new Glide('.glide').mount()
+    });
+  </script>
+
+  <section class="about section-block">
+    <h1 class="section-header">Об учреждении</h1>
+    <div class="about-content">
+      <div class="about-text">
+        <p><b>Государственное бюджетное учреждение социального обслуживания Краснодарского края «Динской комплексный центр социального обслуживания населения»</b> осуществляет свою деятельность с 1998 года. Сегодня - это целостный подход к созданию условий для повышения качества жизни граждан на основе развития сети, внедрения инновационных форм работы и стратегий ухода, обеспечения доступности социальной помощи нуждающимся людям.</p>
+        <div class="detail-link">
+          <a href="" title="" class="btn btn-accent">Подробней</a>
+        </div>
+      </div>
+      <div class="about-pic-wrapper">
+        <img src="/img/about-pic.jpg" class="about-pic" alt="">
+      </div>
+    
+    </div>
+  </section>
+
+  <section class="map section-block">
+    <h2 class="section-header">Как нас найти</h2>
+    <div id="ya-map">
+      <div class="demo-text">Яндекс карта</div>
+    </div>
+  </section>
+<%= _.template(require('./../includes/footer.html').default)(data) %>

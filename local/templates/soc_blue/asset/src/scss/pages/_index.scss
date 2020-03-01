@@ -1,0 +1,36 @@
+.about{
+    .about-content{
+        display: flex;
+        @include breakpoint(max-width $pad-width){
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        p:first-child{
+            margin-top:0;
+        }
+    }
+    .about-pic-wrapper{
+        text-align: center;
+        .img-descr{
+            font-style: italic;
+        }
+    }
+    .about-pic{
+        height: auto;
+        max-width: 300px;
+        border: 1px solid $color-border;
+        @include breakpoint(max-width $pad-width){
+            width: 200px;
+        }
+    }
+    .detail-link{
+        margin-top: 12px;
+        @include breakpoint(max-width $pad-width){
+            text-align: center;
+        }
+    }
+}
+#ya-map{
+    border: 1px solid $color-border;
+    height: 400px;
+}

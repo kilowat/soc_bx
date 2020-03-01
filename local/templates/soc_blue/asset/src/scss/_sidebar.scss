@@ -1,0 +1,12 @@
+.sidebar-left{
+  width: $sidebar-left;
+  margin-right: $sidebar-margin;
+  .sidebar-block-header{
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 10px;
+  }
+  @include breakpoint(max-width $desktop-width){
+    display: none;
+  }
+}
