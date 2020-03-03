@@ -4,10 +4,7 @@
     >div{
         margin-right: 5px;
     }
-    a{
-        color: $color-dark;
-        &:hover{
-            color: $color-accent;
-        }
+    .bx-breadcrumb-item:last-child span{
+        color: $color-dark
     }
 }

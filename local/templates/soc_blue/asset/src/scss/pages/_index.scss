@@ -1,18 +1,42 @@
 .about{
     .about-content{
-        display: flex;
-        @include breakpoint(max-width $pad-width){
-            flex-wrap: wrap;
-            flex-direction: column-reverse;
-        }
         p:first-child{
             margin-top:0;
         }
     }
-    .about-pic-wrapper{
+    .about-pic-wrapper {
         text-align: center;
-        .img-descr{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        @include breakpoint(max-width $pad-width){
+            display: block;
+            .company-descr{
+                margin-top: 12px;
+                margin-left: 0;;
+            }
+        }
+        .company-descr{
+            margin-left: 18px;
             font-style: italic;
+            text-align: left;
+            ul{
+                list-style: none;
+                margin: 0;
+                padding:0;
+                display: table;
+                li{
+                    display: table-row;
+                    span{
+                        padding-bottom: 1em;
+                        display: table-cell;
+                    }
+                    .prop-value{
+                        font-weight: 700;
+                        padding-left: 4px;
+                    }
+                }
+            }
         }
     }
     .about-pic{

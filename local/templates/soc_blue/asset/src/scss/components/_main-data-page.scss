@@ -1,0 +1,22 @@
+.main-data{
+    .prop-item{
+        margin-bottom: 24px;
+        .prop-name{
+            font-weight: 700;
+        }
+        &.prop-MAP{
+            .prop-name{
+                display: inline-block;
+                margin-bottom: 12px;
+                font-size: 20px;
+            }
+        }
+    }
+    .bx-yandex-map{
+        width: 100%!important;
+        border:1px solid #ccc;
+    }
+    .prop-WORK_TIME{
+        overflow-x:auto;
+    }
+}
