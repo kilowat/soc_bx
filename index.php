@@ -60,38 +60,70 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 	)
 );?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	".default",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"COMPONENT_TEMPLATE" => ".default",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/about.php"
-	)
-);?>
-<div id="ya-map">
-	<?$APPLICATION->IncludeComponent(
-	"bitrix:map.yandex.view", 
-	".default", 
+	"bitrix:news.detail", 
+	"about", 
 	array(
-		"COMPONENT_TEMPLATE" => ".default",
-		"INIT_MAP_TYPE" => "MAP",
-		"MAP_DATA" => "a:3:{s:10:\"yandex_lat\";s:7:\"55.7383\";s:10:\"yandex_lon\";s:7:\"37.5946\";s:12:\"yandex_scale\";i:10;}",
-		"MAP_WIDTH" => "100%",
-		"MAP_HEIGHT" => "400",
-		"CONTROLS" => array(
-			0 => "ZOOM",
-			1 => "TYPECONTROL",
-			2 => "SCALELINE",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"BROWSER_TITLE" => "-",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_CODE" => "",
+		"ELEMENT_ID" => CONSTANT::ABOUT_IBLOCK_ID,
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_TEXT",
+			2 => "PREVIEW_PICTURE",
+			3 => "",
 		),
-		"OPTIONS" => array(
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "main_info",
+		"IBLOCK_URL" => "",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"MESSAGE_404" => "",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Страница",
+		"PROPERTY_CODE" => array(
+			0 => "PHONE",
+			1 => "FAX",
+			2 => "EMAIL",
+			3 => "ADDRESS",
+			4 => "",
 		),
-		"MAP_ID" => "",
-		"API_KEY" => ""
+		"SET_BROWSER_TITLE" => "N",
+		"SET_CANONICAL_URL" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_PERMISSIONS" => "N",
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => "about"
 	),
 	false
 );?>
-</div>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

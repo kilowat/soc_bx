@@ -22,15 +22,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"", 
-		"", 
+		"Форма связи", 
+		"#", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Форма связи", 
-		"#", 
+		"", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 

@@ -62,9 +62,67 @@
                             <a href="/" title=""><img src="<?=SITE_TEMPLATE_PATH?>/asset/dist/img/logo.png" id="logo" /></a>
                         </div>
                         <div class="center-block">
-                            <div class="company-name">
-                            Государственное бюджетное учреждение социального обслуживания Краснодарского края
-                            «Динской комплексный центр социального обслуживания населения»
+                            <div class="company-name">    
+                            <?$APPLICATION->IncludeComponent(
+	"bitrix:news.detail", 
+	"company-name", 
+	array(
+		"COMPONENT_TEMPLATE" => "company-name",
+		"IBLOCK_TYPE" => "main_info",
+		"IBLOCK_ID" => "2",
+		"ELEMENT_ID" => CONSTANT::ABOUT_IBLOCK_ID,
+		"ELEMENT_CODE" => "",
+		"CHECK_DATES" => "Y",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "NAME",
+			1 => "",
+		),
+		"IBLOCK_URL" => "",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "N",
+		"SET_TITLE" => "N",
+		"SET_CANONICAL_URL" => "N",
+		"SET_BROWSER_TITLE" => "N",
+		"BROWSER_TITLE" => "-",
+		"SET_META_KEYWORDS" => "N",
+		"META_KEYWORDS" => "-",
+		"SET_META_DESCRIPTION" => "N",
+		"META_DESCRIPTION" => "-",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"USE_PERMISSIONS" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"USE_SHARE" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Страница",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SET_STATUS_404" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
+	),
+	false
+);?>
                             </div>
                         </div>
                         <div class="right-block">
@@ -74,16 +132,68 @@
                                 </div>
                             </div>
                             <div class="info-block">
-                                <div class="phones-cell info-item">
-                                    <div>
-                                        <span class="number-name"></span>
-                                        <span class="phone-number">8-(86132) 4-45-56</span>
-                                    </div>
-                                    <div>
-                                        <span class="number-name"></span>
-                                        <span class="phone-number">8-(86132) 4-45-56</span>
-                                    </div>
-                                </div>
+                            <?$APPLICATION->IncludeComponent(
+	"bitrix:news.detail", 
+	"top-phone", 
+	array(
+		"COMPONENT_TEMPLATE" => "top-phone",
+		"IBLOCK_TYPE" => "main_info",
+		"IBLOCK_ID" => "2",
+		"ELEMENT_ID" => CONSTANT::ABOUT_IBLOCK_ID,
+		"ELEMENT_CODE" => "",
+		"CHECK_DATES" => "Y",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "PHONE",
+			1 => "FAX",
+			2 => "",
+		),
+		"IBLOCK_URL" => "",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "Y",
+		"SET_TITLE" => "N",
+		"SET_CANONICAL_URL" => "N",
+		"SET_BROWSER_TITLE" => "N",
+		"BROWSER_TITLE" => "-",
+		"SET_META_KEYWORDS" => "N",
+		"META_KEYWORDS" => "-",
+		"SET_META_DESCRIPTION" => "N",
+		"META_DESCRIPTION" => "-",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"USE_PERMISSIONS" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"USE_SHARE" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Страница",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SET_STATUS_404" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => ""
+	),
+	false
+);?>
+
                             </div>
                         </div>
                     </div>
@@ -92,21 +202,25 @@
             <div class="nav-block">
                 <div class="container">
                     <nav id="main-nav">
-                                    <?$APPLICATION->IncludeComponent("bitrix:menu", "base_menu", Array(
-                    "COMPONENT_TEMPLATE" => ".default",
-                        "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-                        "MENU_CACHE_TYPE" => "N",	// Тип кеширования
-                        "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-                        "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-                        "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-                        "MAX_LEVEL" => "1",	// Уровень вложенности меню
-                        "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-                        "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-                        "DELAY" => "N",	// Откладывать выполнение шаблона меню
-                        "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-                    ),
-                    false
-                );?>
+                                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"base_menu", 
+	array(
+		"COMPONENT_TEMPLATE" => "base_menu",
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"DELAY" => "Y",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
                     </nav>
         
                     <div class="search-block">
@@ -125,87 +239,35 @@
         <main class="container" id="page-wrap">
             <aside class="sidebar-left">  
                 <div class="sidebar-block">
-                    <ul id="left-menu">
-                            <li>
-                                <a href="#" title="Общие сведения о поставщике социальных услуг" class="root">Общие сведения о поставщике социальных услуг
-                                </a>
-                                <ul class="hide">
-                                    
-                                        <li>
-                                            <a href="/main-info.html" title="Общие данные">
-                                                Общие данные
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Кадровое обеспечение">
-                                                Кадровое обеспечение
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Нормативная документация">
-                                                Нормативная документация
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Материально-техническое обеспечение социальных услуг">
-                                                Материально-техническое обеспечение социальных услуг
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Структура и органы управления">
-                                                Структура и органы управления
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            </li>
-                        
-                            <li>
-                                <a href="#" title="Общие сведения о поставщике социальных услуг" class="root">Общие сведения о поставщике социальных услуг
-                                </a>
-                                <ul class="hide">
-                                    
-                                        <li>
-                                            <a href="#" title="Общие данные">
-                                                Общие данные
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Кадровое обеспечение">
-                                                Кадровое обеспечение
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Нормативная документация">
-                                                Нормативная документация
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Материально-техническое обеспечение социальных услуг">
-                                                Материально-техническое обеспечение социальных услуг
-                                            </a>
-                                        </li>
-                                    
-                                        <li>
-                                            <a href="#" title="Структура и органы управления">
-                                                Структура и органы управления
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            </li>
-                        
-                    </ul>
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"left-menu", 
+	array(
+		"COMPONENT_TEMPLATE" => "left-menu",
+		"ROOT_MENU_TYPE" => "left",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left_sub",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
+
                 </div>
             </aside>
             <div class="content with-sidebar">
             <?if($APPLICATION->GetCurPage() !=="/"):?>
+                <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", Array(
+	
+	),
+	false
+);?>
+
                 <h1 class="section-name"><?=$APPLICATION->ShowTitle(false)?></h1>
             <?endif?>
