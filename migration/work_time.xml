@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hiblock>
+	<hiblock>
+		<id>4</id>
+		<name>Worktime</name>
+		<table_name>b_hlbd_worktime</table_name>
+	</hiblock>
+	<langs>
+		<lang>
+			<id>4</id>
+			<lid>ru</lid>
+			<name>График работы</name>
+		</lang>
+		<lang>
+			<id>4</id>
+			<lid>en</lid>
+			<name>Work time</name>
+		</lang>
+	</langs>
+	<fields>
+		<field>
+			<id>21</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_TIME</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en>Work time</en>
+				<ru>Время работы</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en>Work time</en>
+				<ru>Время работы</ru>
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>22</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_REST_TIME</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<en>Rest</en>
+				<ru>Перерыв</ru>
+			</edit_form_label>
+			<list_column_label>
+				<en />
+				<ru />
+			</list_column_label>
+			<list_filter_label>
+				<en />
+				<ru />
+			</list_filter_label>
+			<error_message>
+				<en />
+				<ru />
+			</error_message>
+			<help_message>
+				<en />
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>23</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_FULL_DESCRIPTION</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>100</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<ru>Полное описание</ru>
+			</edit_form_label>
+			<list_column_label>
+				<ru>Полное описание</ru>
+			</list_column_label>
+			<list_filter_label>
+				<ru>Полное описание</ru>
+			</list_filter_label>
+			<error_message>
+				<ru />
+			</error_message>
+			<help_message>
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>13</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_NAME</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>200</sort>
+			<multiple>N</multiple>
+			<mandatory>Y</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<ru>Название</ru>
+			</edit_form_label>
+			<list_column_label>
+				<ru>Название</ru>
+			</list_column_label>
+			<list_filter_label>
+				<ru>Название</ru>
+			</list_filter_label>
+			<error_message>
+				<ru />
+			</error_message>
+			<help_message>
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>14</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_SORT</field_name>
+			<user_type_id>integer</user_type_id>
+			<xml_id />
+			<sort>300</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<min_value>0</min_value>
+				<max_value>0</max_value>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<ru>Сортировка</ru>
+			</edit_form_label>
+			<list_column_label>
+				<ru>Сортировка</ru>
+			</list_column_label>
+			<list_filter_label>
+				<ru>Сортировка</ru>
+			</list_filter_label>
+			<error_message>
+				<ru />
+			</error_message>
+			<help_message>
+				<ru />
+			</help_message>
+			<base_type>int</base_type>
+		</field>
+		<field>
+			<id>15</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_XML_ID</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>400</sort>
+			<multiple>N</multiple>
+			<mandatory>Y</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<ru>Внешний код</ru>
+			</edit_form_label>
+			<list_column_label>
+				<ru>Внешний код</ru>
+			</list_column_label>
+			<list_filter_label>
+				<ru>Внешний код</ru>
+			</list_filter_label>
+			<error_message>
+				<ru />
+			</error_message>
+			<help_message>
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+		<field>
+			<id>17</id>
+			<entity_id>HLBLOCK_4</entity_id>
+			<field_name>UF_DESCRIPTION</field_name>
+			<user_type_id>string</user_type_id>
+			<xml_id />
+			<sort>600</sort>
+			<multiple>N</multiple>
+			<mandatory>N</mandatory>
+			<show_filter>N</show_filter>
+			<show_in_list>Y</show_in_list>
+			<edit_in_list>Y</edit_in_list>
+			<is_searchable>N</is_searchable>
+			<settings>
+				<size>20</size>
+				<rows>1</rows>
+				<regexp />
+				<min_length>0</min_length>
+				<max_length>0</max_length>
+				<default_value />
+			</settings>
+			<edit_form_label>
+				<ru>Описание</ru>
+			</edit_form_label>
+			<list_column_label>
+				<ru>Описание</ru>
+			</list_column_label>
+			<list_filter_label>
+				<ru>Описание</ru>
+			</list_filter_label>
+			<error_message>
+				<ru />
+			</error_message>
+			<help_message>
+				<ru />
+			</help_message>
+			<base_type>string</base_type>
+		</field>
+	</fields>
+	<items>
+		<item>
+			<id>1</id>
+			<uf_time>09.00 - 18.00</uf_time>
+			<uf_rest_time>13.00 – 13.50</uf_rest_time>
+			<uf_full_description />
+			<uf_name>Понедельник</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>qG7ePmaM</uf_xml_id>
+			<uf_description />
+		</item>
+		<item>
+			<id>2</id>
+			<uf_time>09.00 - 18.00</uf_time>
+			<uf_rest_time>13.00 – 13.50</uf_rest_time>
+			<uf_full_description />
+			<uf_name>Вторник</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>d0ntGakb</uf_xml_id>
+			<uf_description />
+		</item>
+		<item>
+			<id>3</id>
+			<uf_time>09.00 - 18.00</uf_time>
+			<uf_rest_time>13.00 – 13.30</uf_rest_time>
+			<uf_full_description />
+			<uf_name>Среда</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>zORQTDH6</uf_xml_id>
+			<uf_description />
+		</item>
+		<item>
+			<id>4</id>
+			<uf_time>09.00 - 18.00</uf_time>
+			<uf_rest_time>13.00 – 13.50</uf_rest_time>
+			<uf_full_description />
+			<uf_name>Четверг</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>PcWRR5nd</uf_xml_id>
+			<uf_description />
+		</item>
+		<item>
+			<id>5</id>
+			<uf_time>09.00 - 18.00</uf_time>
+			<uf_rest_time>13.00 – 13.50</uf_rest_time>
+			<uf_full_description />
+			<uf_name>Пятница</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>s22tYqVN</uf_xml_id>
+			<uf_description />
+		</item>
+		<item>
+			<id>6</id>
+			<uf_time />
+			<uf_rest_time />
+			<uf_full_description />
+			<uf_name>Суббота</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>y3Os1mg8</uf_xml_id>
+			<uf_description />
+		</item>
+		<item>
+			<id>7</id>
+			<uf_time />
+			<uf_rest_time />
+			<uf_full_description />
+			<uf_name>Воскресенье</uf_name>
+			<uf_sort>100</uf_sort>
+			<uf_xml_id>PsvKdOIa</uf_xml_id>
+			<uf_description />
+		</item>
+	</items>
+</hiblock>

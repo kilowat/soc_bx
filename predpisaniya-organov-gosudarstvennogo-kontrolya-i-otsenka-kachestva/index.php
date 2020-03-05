@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Title");
-LocalRedirect("gosudarstvennoe-zadanie");
+LocalRedirect("predpisaniya-organov-gosudarstvennogo-kontrolya");
 ?>
 
 Text here....

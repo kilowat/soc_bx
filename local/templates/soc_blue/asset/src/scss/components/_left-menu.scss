@@ -13,6 +13,9 @@
         position: relative;
         padding-right: 1em;
         color: $color-accent;
+        &.root-item-selected{
+            color: #014599;
+        }
         &.root-item-selected+ul{
             display: block;
         }

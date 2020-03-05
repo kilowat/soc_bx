@@ -21,6 +21,7 @@ $APPLICATION->SetTitle("Title");
 		"PROPERTY_CODE" => array(
 			0 => "HIDE_NAME",
 			1 => "DOC",
+			2 => "",
 		),
 		"CHECK_DATES" => "Y",
 		"DETAIL_URL" => "",
@@ -51,7 +52,7 @@ $APPLICATION->SetTitle("Title");
 		"DISPLAY_NAME" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TEMPLATE" => "modern",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"PAGER_TITLE" => "Новости",
