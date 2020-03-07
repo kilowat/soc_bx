@@ -16,7 +16,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Информационные материалы", 
-		"#", 
+		"/informatsionnye-materialy/", 
 		Array(), 
 		Array(), 
 		"" 

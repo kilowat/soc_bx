@@ -60,9 +60,9 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 	)
 );?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.detail", 
-	"about", 
-	array(
+	"bitrix:news.detail",
+	"about",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -76,6 +76,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "about",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "N",
@@ -85,12 +86,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_CODE" => "",
 		"ELEMENT_ID" => CONSTANT::ABOUT_IBLOCK_ID,
-		"FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "PREVIEW_TEXT",
-			2 => "PREVIEW_PICTURE",
-			3 => "",
-		),
+		"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_TEXT",2=>"PREVIEW_PICTURE",3=>"",),
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "main_info",
 		"IBLOCK_URL" => "",
@@ -102,13 +98,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Страница",
-		"PROPERTY_CODE" => array(
-			0 => "PHONE",
-			1 => "FAX",
-			2 => "EMAIL",
-			3 => "ADDRESS",
-			4 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"PHONE",1=>"FAX",2=>"EMAIL",3=>"ADDRESS",4=>"",),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_CANONICAL_URL" => "N",
 		"SET_LAST_MODIFIED" => "N",
@@ -119,11 +109,6 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		"SHOW_404" => "N",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_PERMISSIONS" => "N",
-		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "about"
-	),
-	false
-);?>
-
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+		"USE_SHARE" => "N"
+	)
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -57,13 +57,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Дополнительная информация", 
-		"/dopolnitelnaya-informatsiya/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Часто задаваемые вопросы", 
 		"/chasto-zadavaemye-voprosy/", 
 		Array(), 

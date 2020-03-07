@@ -57,7 +57,8 @@
             </div>
             <div class="top-block">
                 <div class="container">
-                    <div class="top-block-wrapper">
+
+            		<div class="top-block-wrapper">
                         <div class="logo-block">
                             <a href="/" title=""><img src="<?=SITE_TEMPLATE_PATH?>/asset/dist/img/logo.png" id="logo" /></a>
                         </div>
@@ -128,7 +129,7 @@
                         <div class="right-block">
                             <div class="additional-block">
                                 <div class="info-item">
-                                    <button class="btn btn-accent">Задать вопрос</button>
+									<button class="btn btn-accent">Задать вопрос</button>
                                 </div>
                             </div>
                             <div class="info-block">
@@ -196,8 +197,13 @@
 
                             </div>
                         </div>
-                    </div>
-                </div>
+					</div>
+					<?$APPLICATION->IncludeComponent(
+						"soc.project:vision",
+						"",
+					Array()
+					);?>
+				</div>
             </div>
             <div class="nav-block">
                 <div class="container">
@@ -269,5 +275,5 @@
 	false
 );?>
 
-                <h1 class="section-name"><?=$APPLICATION->ShowTitle(false)?></h1>
+                <h1 class="section-name"><?=$APPLICATION->ShowTitle()?></h1>
             <?endif?>

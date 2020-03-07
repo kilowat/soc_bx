@@ -1,0 +1,32 @@
+.vision-ver {
+    display: block;
+    font-weight: 700;
+    text-align: left;
+    height: 25px;
+    margin-bottom: -2px;
+}
+.vision-ver a{
+    background-color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 8px 0px 0px 0px;
+}
+span.vision-icon {
+    position: relative;
+    vertical-align: middle;
+    padding-top: 5px;
+    line-height: 1;
+    padding-right: 7px;
+    border-radius: 0 12px 0px 0px;
+    display: inline-block;
+    background-color: #fff;
+    left: -4px;
+    top: -3px;
+}
+span.vision-icon svg{
+    fill: #0061d9;
+}

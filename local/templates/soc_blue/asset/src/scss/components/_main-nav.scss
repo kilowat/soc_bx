@@ -27,9 +27,11 @@
                 text-decoration: none;
                 padding-left: 10px;
                 padding-right: 10px;
+                &:hover{
+                    text-decoration: underline;
+                }
                 &:hover, &.selected{
-                    color: $color-accent;
-                    background-color: $color-body;
+                    color: #064491;
                 }
             }
         }

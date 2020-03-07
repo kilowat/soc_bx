@@ -1,5 +1,6 @@
 .news-detail{
     .news-info{
+        margin-bottom: 0.5em;
         .table{
             width: auto;
             .table-cell{
@@ -17,10 +18,10 @@
         }
     }
     .soc-share{
-        margin-top: 4px;
+        margin-top: 14px;
         margin-bottom: 4px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         .soc-share-text{
             font-weight: 600;
             font-size: 14px;

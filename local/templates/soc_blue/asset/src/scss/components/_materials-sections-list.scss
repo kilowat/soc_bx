@@ -8,12 +8,12 @@
             margin: 12px;
             display: block;
             width: calc(25% - 24px);
-            height: 200px;
+            height: 225px;
             text-align: center;
             padding: 12px;
             text-decoration: none;
             font-weight: 700;
-            background-color: $color-primary-light;
+            background-color: $color-body;
             border: 1px solid $color-border;
             color: $color-dark;
             &:hover{
@@ -25,6 +25,9 @@
             }
             @include breakpoint(max-width $mobile-width){
                 width: calc(100% - 24px);
+            }
+            .section-name-text {
+                min-height: 48px;
             }
             .section-pic{
                 img{

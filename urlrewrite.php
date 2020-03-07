@@ -1,5 +1,13 @@
 <?php
 $arUrlRewrite=array (
+  2 => 
+  array (
+    'CONDITION' => '#^/informatsionnye-materialy/([0-9a-zA-Z_-]+)(\\?(.*))?#',
+    'RULE' => 'SECTION_CODE=$1&$2',
+    'ID' => '',
+    'PATH' => '/informatsionnye-materialy/list.php',
+    'SORT' => 100,
+  ),
   1 => 
   array (
     'CONDITION' => '#^/events/([0-9a-zA-Z_/-]+).html(\\?(.*))?#',
