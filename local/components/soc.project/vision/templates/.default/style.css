@@ -2,8 +2,9 @@
     display: block;
     font-weight: 700;
     text-align: left;
+    position: relative;
     height: 25px;
-    margin-bottom: -2px;
+    top: 10px;
 }
 .vision-ver a{
     background-color: #fff;

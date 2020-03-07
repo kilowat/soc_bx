@@ -22,15 +22,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Форма связи", 
-		"#", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"", 
-		"", 
+		"Форма обратной связи", 
+		"/forma-obratnoy-svyazi/", 
 		Array(), 
 		Array(), 
 		"" 

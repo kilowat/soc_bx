@@ -1,0 +1,35 @@
+.feeback-from{
+    max-width: 520px;
+    .table-cell{
+        vertical-align: middle;
+        padding-bottom: 1em;
+        padding-right: 8px;
+    }
+    .button-cell{
+        text-align: center;
+    }
+    label{
+        font-weight: 700;
+    }
+    .is-required-Y{
+        position: relative;
+    }
+    span.required-asterix {
+        position: absolute;
+        color: red;
+        font-size: 26px;
+    }
+    .input.error{
+        border-color: red;
+    }
+    .req-text{
+        font-style: italic;
+    }
+    .required-asterix-inline{
+        color: red;
+        font-size: 26px;
+        line-height: 0.4;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+}

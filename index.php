@@ -1,7 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
-?><?$APPLICATION->IncludeComponent(
+?>
+
+<?
+$sliderFilter = [
+	"!PROPERTY_MORE_PHOTO"=>false
+];
+$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"main-slider",
 	Array(
@@ -26,7 +32,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(0=>"",1=>"",),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "sliderFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => $_REQUEST["ID"],
 		"IBLOCK_TYPE" => "-",
