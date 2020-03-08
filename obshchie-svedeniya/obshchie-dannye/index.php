@@ -65,18 +65,19 @@ $APPLICATION->SetTitle("Общие данные");
 			19 => "MAP",
 			20 => "",
 		),
-		"SET_BROWSER_TITLE" => "N",
+		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
 		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
+		"SET_STATUS_404" => "Y",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "Y",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_PERMISSIONS" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "main-data-page"
+		"COMPONENT_TEMPLATE" => "main-data-page",
+		"FILE_404" => ""
 	),
 	false
 );?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

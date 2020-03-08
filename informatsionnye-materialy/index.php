@@ -23,8 +23,4 @@ $APPLICATION->SetTitle("Информационные материалы");
 		"TOP_DEPTH" => "2",
 		"VIEW_MODE" => "LINE"
 	)
-);?><?$APPLICATION->IncludeComponent(
-	"vision:vision.special",
-	"",
-Array()
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

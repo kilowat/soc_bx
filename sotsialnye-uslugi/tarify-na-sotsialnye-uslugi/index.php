@@ -61,9 +61,10 @@ $APPLICATION->SetTitle("Title");
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SET_STATUS_404" => "N",
-		"SHOW_404" => "N",
-		"MESSAGE_404" => ""
+		"SET_STATUS_404" => "Y",
+		"SHOW_404" => "Y",
+		"MESSAGE_404" => "",
+		"FILE_404" => ""
 	),
 	false
 );?>

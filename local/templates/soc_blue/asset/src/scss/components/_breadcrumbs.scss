@@ -4,6 +4,9 @@
     margin-bottom: 1rem;
     margin-top: 0.3rem;
     flex-wrap: wrap;
+    @include breakpoint(max-width $pad-width){
+        display:none;
+    }
     >div{
         margin-right: 5px;
     }

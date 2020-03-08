@@ -52,19 +52,25 @@
         li{
             a{
                 text-decoration: none;
-                color: #000;
+                color: rgb(59, 59, 59);
                 padding-left: 16px;
                 padding-right: 16px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 display: block;
                 width: 100%;
+                font-weight: 600;
                 border-top: 1px solid #ccc;
-                &:hover, .selected{
-                    
+                &:hover, &.selected, &.item-selected, &.root-selected{
+                    background-color: #f4f4f4;
                 }
             }
         }
+    }
+    ul>li>ul a{
+        padding-left: 12px;
+        padding-left: 28px;
+        font-weight: 300;
     }
     .bm-item-list{
         font-size: 16px;

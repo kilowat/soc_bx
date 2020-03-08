@@ -1,6 +1,8 @@
 <?php
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
+use \Bitrix\Main\Web\Json;
+
 class FeedbackFormComponent extends \CBitrixComponent
 {
     public static $HASH_ID = 0;
@@ -13,10 +15,28 @@ class FeedbackFormComponent extends \CBitrixComponent
     private function getResult()
     {
         $result = [];
-        $properties = CIBlockProperty::GetList(Array("sort"=>"asc", "SORT"=>"asc"), Array("ACTIVE"=>"Y", "IBLOCK_ID"=>$this->arParams["IBLOCK_ID"]));
-        while ($prop_fields = $properties->GetNext())
+             
+        $cacheTime = $this->arParams["CACHE_TIME"];
+        $cacheId = md5(serialize($this->arParams));
+    
+        $cachePath = '/soc.project/feedback';
+        
+        $obCache = new CPHPCache();
+        if ($obCache->InitCache($cacheTime, $cacheId, $cachePath))
         {
-            $result[] = $prop_fields;
+           $result = $obCache->GetVars();
+        }
+        else
+        {
+            if($obCache->StartDataCache()){
+                $properties = CIBlockProperty::GetList(Array("sort"=>"asc", "SORT"=>"asc"), Array("ACTIVE"=>"Y", "IBLOCK_ID"=>$this->arParams["IBLOCK_ID"]));
+                while ($prop_fields = $properties->GetNext())
+                {
+                    $result[$prop_fields["ID"]] = $prop_fields;
+                }
+
+                $obCache->EndDataCache($result);
+            }
         }
 
         return $result;
@@ -25,7 +45,42 @@ class FeedbackFormComponent extends \CBitrixComponent
 	{
         self::$HASH_ID++;
         $this->arResult["ITEMS"] = $this->getResult();
+        
+        if($_POST["HASH_ID"] == self::$HASH_ID && check_bitrix_sessid() && empty($_POST["email"])){
+            $GLOBALS['APPLICATION']->RestartBuffer();
+            $this->ajaxRequest();
+            die();
+        }elseif($_SERVER['REQUEST_METHOD'] == "GET"){
+            $this->includeComponentTemplate($this->page);
+        }
+    }
+    
+    public function ajaxRequest()
+    {
+        $props = $this->getResult();
+        $arrProps = [];
+        foreach($_POST["ID"] as $key=>$value){
+            if($props[$key]["USER_TYPE"] == "HTML"){
+                $arrProps[$key] =  Array("VALUE" => Array ("TEXT" => $value, "TYPE" => "text"));
+            }else{
+                $arrProps[$key] = $value;
+            }
+        } 
+        $el = new CIBlockElement;
+        $name = new Bitrix\Main\Type\DateTime();
+        $arLoadProductArray = Array(
+            "IBLOCK_SECTION_ID" => false,          // элемент лежит в корне раздела
+            "IBLOCK_ID"      => $this->arParams["IBLOCK_ID"],
+            "PROPERTY_VALUES"=> $arrProps,
+            "NAME"           => "Вопрос ".$name,
+        );
+        
+        if($PRODUCT_ID = $el->Add($arLoadProductArray)){
+            $response = ["ADDED" => true];
+        }else{
+            $response = ["ADDED"=>false, "ERROR" => $el->LAST_ERROR];
+        }
 
-        $this->includeComponentTemplate($this->page);
-	}
+        echo Json::encode($response); 
+    }
 } 

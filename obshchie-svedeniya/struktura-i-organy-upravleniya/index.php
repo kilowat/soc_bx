@@ -56,14 +56,15 @@ $APPLICATION->SetTitle("Title");
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
 		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
+		"SHOW_404" => "Y",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
+		"STRICT_SECTION_CHECK" => "N",
+		"FILE_404" => ""
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

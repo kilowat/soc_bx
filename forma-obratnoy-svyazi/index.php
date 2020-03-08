@@ -21,4 +21,5 @@ $APPLICATION->SetTitle("Форма обратной связи");
 		"USER_CONSENT_IS_LOADED" => "N"
 	),
 	false
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

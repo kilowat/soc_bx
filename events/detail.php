@@ -45,19 +45,21 @@ $APPLICATION->SetTitle("Title");
 		"PROPERTY_CODE" => array(
 			0 => "",
 			1 => "MORE_PHOTO",
+			2 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
 		"SET_META_KEYWORDS" => "Y",
-		"SET_STATUS_404" => "N",
+		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
+		"SHOW_404" => "Y",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_PERMISSIONS" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "news-detail"
+		"COMPONENT_TEMPLATE" => "news-detail",
+		"FILE_404" => ""
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -24,23 +24,44 @@
                         <div class="top-menu-block">
                             <drawer-menu>
                                 <div id="mobile-menu">
-                                    <ul>
-                                        <li>
-                                            <a href="" title="">Ссылка</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="">Ссылка</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="">Ссылка</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="">Ссылка</a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="">Ссылка</a>
-                                        </li>
-                                    </ul>
+								<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"base_menu", 
+	array(
+		"COMPONENT_TEMPLATE" => "base_menu",
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"DELAY" => "Y",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"left-menu-mobile", 
+	array(
+		"COMPONENT_TEMPLATE" => "left-menu-mobile",
+		"ROOT_MENU_TYPE" => "left",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left_sub",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
                                 </div>
                             </drawer-menu>
                         </div>
@@ -98,7 +119,7 @@
 		"BROWSER_TITLE" => "-",
 		"SET_META_KEYWORDS" => "N",
 		"META_KEYWORDS" => "-",
-		"SET_META_DESCRIPTION" => "N",
+		"SET_META_DESCRIPTION" => "Y",
 		"META_DESCRIPTION" => "-",
 		"SET_LAST_MODIFIED" => "N",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
@@ -129,7 +150,15 @@
                         <div class="right-block">
                             <div class="additional-block">
                                 <div class="info-item">
-									<button class="btn btn-accent">Задать вопрос</button>
+								<?$APPLICATION->IncludeComponent(
+									"soc.project:feedback.button", 
+									".default", 
+									array(
+										"COMPONENT_TEMPLATE" => ".default",
+										"CLASS" => "btn-accent"
+									),
+									false
+								);?>
                                 </div>
                             </div>
                             <div class="info-block">
@@ -231,12 +260,14 @@
         
                     <div class="search-block">
                         <div class="search">
-                            <input type="text" class="input" placeholder="Поиск">
-                            <button type="button" class="search-btn">
-                            <svg class="svg-icon icon-grey">
-                                <use xlink:href="/local/templates/soc_blue/asset/dist/sprites/spritemap.svg#sprite-search"></use>
-                            </svg>
-                            </button>
+							<form action="/search" method="GET">
+								<input type="text" class="input" placeholder="Поиск" name="q">
+								<button type="submit" class="search-btn">
+									<svg class="svg-icon icon-grey">
+										<use xlink:href="/local/templates/soc_blue/asset/dist/sprites/spritemap.svg#sprite-search"></use>
+									</svg>
+								</button>
+							</form>
                         </div>
                     </div>
                 </div>
@@ -275,5 +306,5 @@
 	false
 );?>
 
-                <h1 class="section-name"><?=$APPLICATION->ShowTitle()?></h1>
+                <h1 class="section-name"><?=$APPLICATION->ShowTitle(false)?></h1>
             <?endif?>

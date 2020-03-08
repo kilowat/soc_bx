@@ -1,3 +1,8 @@
+.form-header {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 1em;
+}
 .feeback-from{
     max-width: 520px;
     .table-cell{
@@ -32,4 +37,14 @@
         display: inline-block;
         vertical-align: bottom;
     }
+}
+.box-msg-row {
+    text-align: center;
+    margin-top: 20px;
+}
+.box-msg.green{
+    color: green;
+}
+.box-msg.red{
+    color: red;
 }
