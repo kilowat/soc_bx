@@ -18,7 +18,8 @@ $APPLICATION->SetTitle("Форма обратной связи");
 		"USER_CONSENT" => "Y",
 		"USER_CONSENT_ID" => "1",
 		"USER_CONSENT_IS_CHECKED" => "Y",
-		"USER_CONSENT_IS_LOADED" => "N"
+		"USER_CONSENT_IS_LOADED" => "N",
+		"MAIL_HANDLER" => "FORM_REQUEST"
 	),
 	false
 );?>

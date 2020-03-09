@@ -13,6 +13,16 @@
     .link-slide{
         .link-pic{
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 120px;
+            a{
+                display: flex;
+                vertical-align: middle;
+                flex-direction: column;
+                justify-content: center;
+            }
             img{
                 display: inline-block;
             }

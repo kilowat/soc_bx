@@ -218,14 +218,14 @@
                 <div class="info-cell">
                   <div class="info-text">
 				  	<?$APPLICATION->IncludeComponent(
-						"soc.project:feedback.button", 
-						".default", 
-						array(
-							"COMPONENT_TEMPLATE" => ".default",
-							"CLASS" => "btn-transparent-white"
-						),
-						false
-					);?>
+	"soc.project:feedback.button", 
+	".default", 
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"CLASS" => "btn-transparent-white"
+	),
+	false
+);?>
                   </div>
                 </div>
               </div>

@@ -54,6 +54,12 @@ $arComponentParameters = array(
 			"ADDITIONAL_VALUES" => "Y",
 			"REFRESH" => "Y",
 		),
+		"MAIL_HANDLER" => array(
+			"PARENT" => "BASE",
+			"NAME" => GetMessage("MAIL_HANDLER"),
+			"TYPE" => "STRING",
+			"DEFAULT" => 'FORM_REQUEST',
+		),
 		"CACHE_TIME"  =>  array("DEFAULT"=>36000000),
 		"USER_CONSENT" => array(),
 	),

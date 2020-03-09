@@ -12,8 +12,6 @@
     .element-item{
         margin-bottom: 1em;
         padding-bottom: 1em;
-        min-width: 480px;
-        overflow-x: hidden;
         .item-name{
             font-size: 1.2em;
             font-weight: 700;
@@ -24,9 +22,14 @@
             max-width: 100%;
         }
         .item-text{
+            overflow-x: auto;
             table {
-                width: 100%;
+                @include breakpoint(min-width $desktop-width){
+                    width: 100%;
+                }
+
                 border: none;
+                
                 tr{
                     border:none;
                 }

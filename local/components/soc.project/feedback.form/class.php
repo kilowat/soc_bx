@@ -2,6 +2,7 @@
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use \Bitrix\Main\Web\Json;
+use Bitrix\Main\Mail\Event;
 
 class FeedbackFormComponent extends \CBitrixComponent
 {
@@ -55,16 +56,27 @@ class FeedbackFormComponent extends \CBitrixComponent
         }
     }
     
+    public function sendEmail($fields)
+    { 
+        Event::send(array(
+            "EVENT_NAME" => $this->arParams["MAIL_HANDLER"],
+            "LID" => "s1",
+            "C_FIELDS" =>$fields,
+        )); 
+    }
+
     public function ajaxRequest()
     {
         $props = $this->getResult();
         $arrProps = [];
+        $mailFields = [];
         foreach($_POST["ID"] as $key=>$value){
             if($props[$key]["USER_TYPE"] == "HTML"){
                 $arrProps[$key] =  Array("VALUE" => Array ("TEXT" => $value, "TYPE" => "text"));
             }else{
                 $arrProps[$key] = $value;
             }
+            $mailFields[$props[$key]["CODE"]] = $value;
         } 
         $el = new CIBlockElement;
         $name = new Bitrix\Main\Type\DateTime();
@@ -77,6 +89,7 @@ class FeedbackFormComponent extends \CBitrixComponent
         
         if($PRODUCT_ID = $el->Add($arLoadProductArray)){
             $response = ["ADDED" => true];
+            $this->sendEmail($mailFields);
         }else{
             $response = ["ADDED"=>false, "ERROR" => $el->LAST_ERROR];
         }

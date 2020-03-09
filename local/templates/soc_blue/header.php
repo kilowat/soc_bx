@@ -11,8 +11,9 @@
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH. "/asset/dist/css/style.bundle.css");
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH. "/asset/dist/js/bundle.js");
         
-        $APPLICATION->ShowHead();
+		$APPLICATION->ShowHead();
     ?>
+	<script src="//code.jivosite.com/widget/IC0yU2oZUF" async></script>
   </head>
   <body>
       <?$APPLICATION->ShowPanel()?>
