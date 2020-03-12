@@ -4,15 +4,11 @@
         .table{
             width: auto;
             .table-cell{
-                vertical-align: middle;
+                vertical-align: top;
                 padding-right: 4px;
                 &.sep-cell{
                     padding-left: 8px;
                     padding-right: 8px;
-                }
-                .svg-icon{
-                    position: relative;
-                    top: 2px;
                 }
             }
         }
