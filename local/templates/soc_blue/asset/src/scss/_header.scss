@@ -13,7 +13,6 @@
     box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   }
   .top-block{
-    padding-top: 14px;
     padding-bottom: 14px;
     background-color: $color-primary;
 
@@ -49,7 +48,7 @@
       }
     }
     .right-block{
-      width: calc(50% - 156px);
+      width: 50%;
       display: flex;
       justify-content: flex-end;
       .info-block{
@@ -71,6 +70,10 @@
         }
         .phones-cell{
           margin-bottom: 10px;
+          span{
+            text-decoration: none;
+            color: #fff;
+          }
         }
         .number-name{
           display: inline-block;

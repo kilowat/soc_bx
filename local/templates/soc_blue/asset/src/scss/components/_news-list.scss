@@ -54,14 +54,10 @@
                 display: flex;
                 justify-content: space-between;
                 .table-cell{
-                    vertical-align: middle;
+                    vertical-align: top;
                 }
                 .item-value{
                     padding-left: 4px;
-                }
-                .item-icon{
-                    position: relative;
-                    top: 2px;
                 }
             }
         }

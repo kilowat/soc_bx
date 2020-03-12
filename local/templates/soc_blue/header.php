@@ -67,9 +67,7 @@
                         </div>
                         <div class="m-phone-number-block">
                             <div class="phone-number-m">
-                                <svg class="svg-icon ic-middle icon-white">
-                                    <use xlink:href="/local/templates/soc_blue/asset/dist/sprites/spritemap.svg#sprite-phone_enabled"></use>
-                                </svg>
+								<i class="ic-inline sprite-phone"></i>
                                 <a>8 86132 3-44-55</a>
                             </div>
                         </div>
@@ -77,8 +75,13 @@
                 </div>
             </div>
             <div class="top-block">
+				<?$APPLICATION->IncludeComponent(
+						"soc.project:vision",
+						"",
+					Array()
+				);
+				?>
                 <div class="container">
-
             		<div class="top-block-wrapper">
                         <div class="logo-block">
                             <a href="/" title=""><img src="<?=SITE_TEMPLATE_PATH?>/asset/dist/img/logo.png" id="logo" /></a>
@@ -227,11 +230,6 @@
                             </div>
                         </div>
 					</div>
-					<?$APPLICATION->IncludeComponent(
-						"soc.project:vision",
-						"",
-					Array()
-					);?>
 				</div>
             </div>
             <div class="nav-block">
@@ -263,9 +261,7 @@
 							<form action="/search" method="GET">
 								<input type="text" class="input" placeholder="Поиск" name="q">
 								<button type="submit" class="search-btn">
-									<svg class="svg-icon icon-grey">
-										<use xlink:href="/local/templates/soc_blue/asset/dist/sprites/spritemap.svg#sprite-search"></use>
-									</svg>
+									<i class="ic-inline sprite-search"></i>
 								</button>
 							</form>
                         </div>

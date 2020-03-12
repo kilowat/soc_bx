@@ -25,7 +25,7 @@ const cssNano = require("cssnano")({
 
 /*sprites path settings*/
 const pngSpriteFile = 'dist/sprites/sprite.png';
-const pngCssSpritePath = '/sprites/sprite.png?hash=[hash]';
+const pngCssSpritePath = '/local/templates/soc_blue/asset/dist/sprites/sprite.png?hash=[hash]';
 const svgPath = '/sprites/spritemap.svg';
 /*****************************************/
 
