@@ -83,7 +83,6 @@ main {
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.2);
 }
 #page-wrap{
-  background-color: $color-white;
   padding-top: 1em;
   padding-bottom: 2em;
   margin-bottom: 3em;
@@ -95,6 +94,10 @@ main {
   width: 100%;
   &.with-sidebar{
     width: calc(100% - #{$sidebar-left});
+    background: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     @include breakpoint(max-width $desktop-width){
       width: 100%;
     }
@@ -105,6 +108,8 @@ main {
   margin-top:0;
   font-size: 1.6em;
   margin-bottom: 1.2em;
+  position: relative;
+
   @include breakpoint(max-width $pad-width){
     font-size: 1.2em;
   }

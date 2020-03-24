@@ -9,10 +9,15 @@
     }
     >li>a{
         font-weight: 500;
-        font-size: 18px;
+        font-size: 15px;
         position: relative;
         padding-right: 1em;
         color: $color-accent;
+        text-transform: uppercase;
+        display: block;
+        &.root-item{
+
+        }
         &.root-item-selected{
             color: #014599;
         }
@@ -22,18 +27,27 @@
     }
     >li{
         >ul{
-            margin: 0;
-            padding: 0;
-            list-style: none;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          line-height: 1em;
+          margin-top: 10px;
             //display: none;
             a{
                 display: block;
                 text-decoration: none;
-                padding: 5px 0;
-                line-height: 1.4em;
-                color:#5f5f5f;
-                &:hover, &.item-selected{
-                    color: #000;
+                padding: 0px 0;
+                line-height: 1.3em;
+                color: #272727;
+                margin-bottom: 6px;
+                font-size: 15px;
+                &:hover{
+                  color: #0061d9;
+                }
+
+                &.item-selected{
+                  color: #0061d9;
+                  text-decoration: underline;
                 }
             }
         }

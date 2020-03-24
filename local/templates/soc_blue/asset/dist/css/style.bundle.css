@@ -1778,7 +1778,7 @@ template {
 
 .header {
   color: #fff;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
   @media (max-width: 980px) {
     .header {
       background-color: #000026;
@@ -2002,7 +2002,8 @@ template {
     flex-wrap: wrap;
     text-decoration: none;
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    text-transform: uppercase; }
     #main-nav ul li a:hover {
       text-decoration: underline; }
     #main-nav ul li a:hover, #main-nav ul li a.selected {
@@ -2105,10 +2106,12 @@ template {
     padding-bottom: 16px; }
   #left-menu > li > a {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
     padding-right: 1em;
-    color: #0061d9; }
+    color: #0061d9;
+    text-transform: uppercase;
+    display: block; }
     #left-menu > li > a.root-item-selected {
       color: #014599; }
     #left-menu > li > a.root-item-selected + ul {
@@ -2116,15 +2119,22 @@ template {
   #left-menu > li > ul {
     margin: 0;
     padding: 0;
-    list-style: none; }
+    list-style: none;
+    line-height: 1em;
+    margin-top: 10px; }
     #left-menu > li > ul a {
       display: block;
       text-decoration: none;
-      padding: 5px 0;
-      line-height: 1.4em;
-      color: #5f5f5f; }
-      #left-menu > li > ul a:hover, #left-menu > li > ul a.item-selected {
-        color: #000; }
+      padding: 0px 0;
+      line-height: 1.3em;
+      color: #272727;
+      margin-bottom: 6px;
+      font-size: 15px; }
+      #left-menu > li > ul a:hover {
+        color: #0061d9; }
+      #left-menu > li > ul a.item-selected {
+        color: #0061d9;
+        text-decoration: underline; }
 
 .about .about-content p:first-child {
   margin-top: 0; }
@@ -2673,7 +2683,6 @@ main {
   box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2); }
 
 #page-wrap {
-  background-color: #fff;
   padding-top: 1em;
   padding-bottom: 2em;
   margin-bottom: 3em; }
@@ -2684,7 +2693,11 @@ main {
 .content {
   width: 100%; }
   .content.with-sidebar {
-    width: calc(100% - 300px); }
+    width: calc(100% - 300px);
+    background: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px; }
     @media (max-width: 980px) {
       .content.with-sidebar {
         width: 100%; } }
@@ -2693,7 +2706,8 @@ main {
   text-align: left;
   margin-top: 0;
   font-size: 1.6em;
-  margin-bottom: 1.2em; }
+  margin-bottom: 1.2em;
+  position: relative; }
   @media (max-width: 680px) {
     .section-name {
       font-size: 1.2em; } }

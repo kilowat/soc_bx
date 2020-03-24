@@ -1,7 +1,7 @@
 .header{
   //height: $header-height;
   color: $color-white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   @include breakpoint(max-width $desktop-width){
     background-color: $color-primary;
     height: $mobile-header-height;
